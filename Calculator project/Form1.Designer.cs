@@ -44,12 +44,14 @@
             btnmultiply = new Button();
             btndevision = new Button();
             btnEqual = new Button();
+            btnClear = new Button();
+            lblDisplay = new Label();
             SuspendLayout();
             // 
             // TextBoxDisplay
             // 
             TextBoxDisplay.Font = new Font("Segoe UI", 20F);
-            TextBoxDisplay.Location = new Point(51, 27);
+            TextBoxDisplay.Location = new Point(51, 28);
             TextBoxDisplay.Name = "TextBoxDisplay";
             TextBoxDisplay.ReadOnly = true;
             TextBoxDisplay.Size = new Size(241, 43);
@@ -210,11 +212,32 @@
             btnEqual.UseVisualStyleBackColor = true;
             btnEqual.Click += btnEqual_Click;
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(240, 217);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(40, 23);
+            btnClear.TabIndex = 16;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += button1_Click;
+            // 
+            // lblDisplay
+            // 
+            lblDisplay.AutoSize = true;
+            lblDisplay.Location = new Point(232, 9);
+            lblDisplay.Name = "lblDisplay";
+            lblDisplay.Size = new Size(0, 15);
+            lblDisplay.TabIndex = 17;
+            lblDisplay.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(799, 374);
+            ClientSize = new Size(329, 374);
+            Controls.Add(lblDisplay);
+            Controls.Add(btnClear);
             Controls.Add(btnEqual);
             Controls.Add(btndevision);
             Controls.Add(btnmultiply);
@@ -257,5 +280,7 @@
         private Button btnmultiply;
         private Button btndevision;
         private Button btnEqual;
+        private Button btnClear;
+        private Label lblDisplay;
     }
 }
