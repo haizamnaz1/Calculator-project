@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            TextBoxDisplay = new TextBox();
+            SuspendLayout();
+            // 
+            // TextBoxDisplay
+            // 
+            TextBoxDisplay.Font = new Font("Segoe UI", 20F);
+            TextBoxDisplay.Location = new Point(51, 27);
+            TextBoxDisplay.Name = "TextBoxDisplay";
+            TextBoxDisplay.ReadOnly = true;
+            TextBoxDisplay.Size = new Size(241, 43);
+            TextBoxDisplay.TabIndex = 0;
+            TextBoxDisplay.TextAlign = HorizontalAlignment.Right;
+            TextBoxDisplay.TextChanged += textBox1_TextChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(TextBoxDisplay);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox TextBoxDisplay;
     }
 }
